@@ -16,6 +16,7 @@ def gross_for_director(director_data)
       return total
     end
   }
+
   director_index = 0
   while director_index < directors_database.length do
     if directors_database[director_index][:name] == director_data
