@@ -39,10 +39,6 @@ end
 
 # Write a method that, given an NDS creates a new Hash
 # The return value should be like:
-<<<<<<< HEAD
-=======
-# 
->>>>>>> 38df41afe25cb341a75c38f886a5f49cf9b8446f
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
   result = {}
@@ -56,7 +52,6 @@ def directors_totals(nds)
   return result
 end
 
-<<<<<<< HEAD
 # def directors_totals(nds)
 #  result = {}
 #  directors_database.each { |director|
@@ -65,7 +60,7 @@ end
 #    }
 #  return result
 #end
-=======
+
 # Zero is director_index, need to iterate through the length of directors_index and see if the entry matches director_data
 # pp directors_database[0][:name]
 # pp directors_database[0][:movies][0][:worldwide_gross]
@@ -75,4 +70,3 @@ end
 # If not, ++
 
 # pp directors_database[1][:movies][1][:worldwide_gross]
->>>>>>> 38df41afe25cb341a75c38f886a5f49cf9b8446f
