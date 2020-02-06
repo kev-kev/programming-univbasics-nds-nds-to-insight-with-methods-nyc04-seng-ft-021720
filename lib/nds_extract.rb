@@ -40,26 +40,26 @@ end
 # Write a method that, given an NDS creates a new Hash
 # The return value should be like:
 # { directorOne => allTheMoneyTheyMade, ... }
+# def directors_totals(nds)
+#   result = {}
+#   director_index = 0
+#   while director_index < nds.length do
+#     #take the name of the director as the key and the value of their films as the value and add to the results hash
+#     director_name = nds[director_index][:name]
+#     result[director_name] = gross_for_director(nds[director_index])
+#     director_index += 1
+#   end
+#   return result
+# end
+
 def directors_totals(nds)
   result = {}
-  director_index = 0
-  while director_index < nds.length do
-    #take the name of the director as the key and the value of their films as the value and add to the results hash
-    director_name = nds[director_index][:name]
-    result[director_name] = gross_for_director(nds[director_index])
-    director_index += 1
-  end
+  directors_database.each { |director|
+    director_name = [director][:name]
+    result[director_name] = gross_for_director(director)
+    }
   return result
 end
-
-# def directors_totals(nds)
-#  result = {}
-#  directors_database.each { |director|
-#    director_name = [director][:name]
-#    result[director_name] = gross_for_director(director)
-#    }
-#  return result
-#end
 
 # Zero is director_index, need to iterate through the length of directors_index and see if the entry matches director_data
 # pp directors_database[0][:name]
