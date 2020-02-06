@@ -55,7 +55,7 @@ end
 def directors_totals(nds)
   result = {}
   directors_database.each { |director|
-    director_name = [director[:name]
+    director_name = director[:name]
     result[director_name] = gross_for_director(director)
     }
   return result
