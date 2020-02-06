@@ -6,7 +6,6 @@ require 'pp'
 # using director_data as input
 
 def gross_for_director(director_data)
-<<<<<<< HEAD
   directors_database.each { |director|
     if director[:name] == director_data[:name]
       #if they match, we need to iterate over each of their movies and sum up the worldwide gross
@@ -16,8 +15,7 @@ def gross_for_director(director_data)
       }
       return total
     end
-    }
-=======
+  }
   director_index = 0
   while director_index < directors_database.length do
     if directors_database[director_index][:name] == director_data
